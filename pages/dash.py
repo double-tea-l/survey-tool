@@ -9,15 +9,18 @@ import altair as alt
 import plotly.graph_objects as go
 from streamlit_navigation_bar import st_navbar
 from st_aggrid import AgGrid, GridOptionsBuilder
-from data import data_prep as dp
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../data')))
+import dash_prep as dp
 
-def show_charts():
+
+def show_dash():
+    # m = dp.metrics_prep()
+    # m1 = m.m1
+    # m2 = m.m2
+    # m3 = m.m3
+    # m4 = m.m4
     
-    m = dp.metrics_prep()
-    m1 = m.m1
-    m2 = m.m2
-    m3 = m.m3
-    m4 = m.m4
-    
-    fig_m1 = go.Figure()
+    # fig_m1 = go.Figure()
     st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
