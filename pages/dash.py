@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 import altair as alt
 import plotly.graph_objects as go
 from streamlit_navigation_bar import st_navbar
-from data import dash_prep as dp
 from st_aggrid import AgGrid, GridOptionsBuilder
+from data import data_prep as dp
 
 def show_charts():
     
