@@ -16,11 +16,41 @@ import dash_prep as dp
 
 
 def show_dash():
-    # m = dp.metrics_prep()
-    # m1 = m.m1
-    # m2 = m.m2
-    # m3 = m.m3
-    # m4 = m.m4
+    m = dp.metrics_prep()
+    m1 = m.m1
+    m2 = m.m2
+    m3 = m.m3
+    m4 = m.m4
     
-    # fig_m1 = go.Figure()
-    st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+    fig_m1 = go.Figure()
+    st.metric(label="Total Number of Issues", value=m1)
+
+    fig_m2 = go.Figure()
+    st.metric(label="Total Number of Issues", value=m1)
+
+
+
+    # Display the plots in Streamlit using columns
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.plotly_chart(fig_m1, use_container_width=True)
+
+    with col2:
+        
+         st.plotly_chart(fig_m2, use_container_width=True)
+        
+        # Second row with two columns
+    # col3, col4 = st.columns(2)
+    
+    # with col3:
+    #     st.plotly_chart(fig_m3, use_container_width=True)
+
+    # with col4:
+    #     st.plotly_chart(fig_m4, use_container_width=True)
+
+
+
+    
+# cd /Users/t0l0bkk/Documents/TTL/github/survey-tool/
+# streamlit run streamlit_run.py 

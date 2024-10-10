@@ -4,11 +4,11 @@ import numpy as np
 df = pd.read_excel('/Users/t0l0bkk/Documents/TTL/github/survey-tool/data/raw_data.xlsx',sheet_name = 'sample')
 
 
-class metrics_prep(df):
+class metrics_prep():
     
     def __init__(self):
         
-        # outputs
+        # outputs'
         self.m1 = self.get_m1()
         self.m2 = self.get_m2()
         self.m3 = self.get_m3()
